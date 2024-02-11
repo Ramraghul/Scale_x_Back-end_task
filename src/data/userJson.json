@@ -1,0 +1,22 @@
+[
+    {
+        "role":"Admin",
+        "userName":"Raghul Shetty",
+        "password":"Elon@1234"
+    },
+    {
+        "role":"Admin",
+        "userName":"Bill Gates",
+        "password":"Bill@1234"
+    },
+    {
+        "role":"User",
+        "userName":"Elon Musk",
+        "password":"Jeff@1234"
+    },
+    {
+        "role":"User",
+        "userName":"Bat Man",
+        "password":"Bruce@1234"
+    }
+]

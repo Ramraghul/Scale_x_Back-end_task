@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "70c0c8ba-9f2e-4efe-9336-c10da5269114",
+		"name": "Scale X Media",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23497037"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"role\":\"Admin\",\n    \"username\":\"Raghul Shetty\",\n    \"password\":\"Elon@1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Home",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkVsb24gTXVzayIsInVzZXJUeXBlIjoiVXNlciIsImlhdCI6MTcwNzU1NTEzMn0.l50af-nC1DhVLK9HkYZkpnZN37k_ek1u-9z_bPq7BNM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book In User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhZ2h1bCBTaGV0dHkiLCJ1c2VyVHlwZSI6IkFkbWluIiwiaWF0IjoxNzA3NTU2OTM5fQ.0W84SGJGEE1npFGqvgFjN4rSgaqtbHqcVAfMCSK5ysg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BookName\":\"IKIGAI\",\n    \"Author\":\"Hector\",\n    \"PublicationYear\":1981\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/addBook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book In User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhZ2h1bCBTaGV0dHkiLCJ1c2VyVHlwZSI6IkFkbWluIiwiaWF0IjoxNzA3NTU2OTM5fQ.0W84SGJGEE1npFGqvgFjN4rSgaqtbHqcVAfMCSK5ysg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BookName\":\"ikigai\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/deleteBook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deleteBook"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
